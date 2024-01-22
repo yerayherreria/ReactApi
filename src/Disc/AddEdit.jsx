@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { createDisc, getDisc, updateDisc } from '../services/DiscServices';
+import { useParams } from 'react-router-dom';
 
-function Add({id}) {
-    //6564598af353f12c24ad022b
-    
+function Add() {
+    const { id } = useParams();
+
     const [disc, setDisc] = useState({ name: "", numSong: 0, category: "", duration: 0 });
 
     function handleData(e){

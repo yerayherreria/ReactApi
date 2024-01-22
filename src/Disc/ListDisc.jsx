@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { deleteDisc, getDisc, getDiscs } from '../services/DiscServices';
+import { Link } from 'react-router-dom';
 
 function Discs() {
   const [discs, setDiscs] = useState([]);
@@ -30,7 +31,7 @@ function Discs() {
           <h6 className="card-subtitle mb-2 text-body-secondary">{element.category}</h6>
           <p className="card-text">Number songs:{element.numSong} with duration:{element.duration}</p>
           <button type="button" className="btn btn-primary" id={element._id} onClick={delete3Disc}>Delete</button>
-
+          <Link to={`/addDisc/${element._id}`}>Edit</Link>
         </div>
       </div>
 

@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import Home from "./components/Home"
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Discs from "./Disc/ListDisc";
+import Add from "./Disc/AddEdit";
+import Layout from "./components/Layout";
+import Disc from "./Disc/ViewDisc";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const Router = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Navigate to="/home" replace/>} />
+              <Route path="home" element={<Home />}></Route>
+              <Route path="about" element={<About />}></Route>
+              <Route path="contact" element={<Contact />}></Route>
+              <Route path="listDisc" element={<Discs />}></Route>
+              <Route path="viewDetails/:id" element={<Disc />}></Route>
+              <Route path="addDisc" element={<Add />}></Route>
+              <Route path="addDisc/:id" element={<Add />}></Route>
+              <Route path="*" element={ <h1> Error 404</h1>}></Route>
+            </Route>
+          </Routes>
+      </BrowserRouter>
+      {/* <Disc />
+    <Discs />
+    <Add id="6564598af353f12c24ad022b"/> */}
     </>
   )
 }
-
-export default App
+export default Router

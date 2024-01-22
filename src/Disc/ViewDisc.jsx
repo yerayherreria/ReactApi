@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { getDisc } from '../services/DiscServices';
+import { useParams } from 'react-router-dom';
 
 function Disc() {
+  const { id } = useParams();
   const [disc, setDisc] = useState({});
-  const [id, setId] = useState("");
   function handleData(e){
     setId(e.target.value);
 }
@@ -15,10 +16,6 @@ function Disc() {
   
   return (
     <>
-    <div>
-        <h3>{id}</h3>
-        <input type="text" name="name" onChange={handleData} />
-    </div>
     <div key={disc._id} className="card" style={{width: '18rem'}}>
         <div className="card-body">
           <h5 className="card-title">{disc.name}</h5>
