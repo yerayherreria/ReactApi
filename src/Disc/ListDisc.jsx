@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 function Discs() {
   const [discs, setDiscs] = useState([]);
-  const [disc, setDisc] = useState(null);
   useEffect(() => {
     getDiscs().then((response) => {
         setDiscs(response.data);

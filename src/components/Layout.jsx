@@ -28,6 +28,12 @@ const Layout = () => {
                         <a class="nav-link active" aria-current="page" href="#"><Link to="/addDisc">Add Disc</Link></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><Link to="/listArtist">List Artist</Link></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><Link to="/addArtist">Add Artist</Link></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#"><Link to="/about">About</Link></a>
                     </li>
                     <li class="nav-item">
