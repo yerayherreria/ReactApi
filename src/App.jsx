@@ -9,6 +9,8 @@ import Disc from "./Disc/ViewDisc";
 import ListArtist from "./Artist/ListArtist";
 import DetailsArtist from "./Artist/ViewArtist";
 import AddEditArtist from "./Artist/AddEditArtist";
+import ListUsers from "./User/ListUser";
+import RegisterEditUser from "./User/RegisterEdit";
 
 const Router = () => {
   return (
@@ -28,6 +30,9 @@ const Router = () => {
               <Route path="detailsArtist" element={<DetailsArtist />}></Route>
               <Route path="addArtist" element={<AddEditArtist />}></Route>
               <Route path="editArtist/:id" element={<AddEditArtist />}></Route>
+              <Route path="listUsers" element={<ListUsers />}></Route>
+              <Route path="addUser" element={<RegisterEditUser />}></Route>
+              <Route path="editUser/:id" element={<RegisterEditUser />}></Route>
               <Route path="*" element={ <h1> Error 404</h1>}></Route>
             </Route>
           </Routes>

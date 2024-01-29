@@ -34,6 +34,12 @@ const Layout = () => {
                         <a class="nav-link active" aria-current="page" href="#"><Link to="/addArtist">Add Artist</Link></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><Link to="/listUsers">List Users</Link></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><Link to="/addUser">Add User</Link></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#"><Link to="/about">About</Link></a>
                     </li>
                     <li class="nav-item">
