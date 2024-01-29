@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:3000/artist';
+const baseURL = 'https://project-three-models.vercel.app/artist';
 
 const apiService = axios.create({
 baseURL,
